@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Add Stock in Portfolio</h1>
+      <form>
+        <input type="text" id="name" placeholder="Company Name" />
+        <input type="number" id="price" placeholder="Price" />
+        <input type="number" id="quantity" placeholder="Quantity" />
+        <select id="category">
+          <option value="">Stock category</option>
+          <option value="Small Cap">Small Cap</option>
+          <option value="Mid Cap">Mid Cap</option>
+          <option value="Large Cap">Large Cap</option>
+          <input type="submit" />
+        </select>
+      </form>
+      <h1 id="total-price">Total Price:-<span>0</span></h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Total</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

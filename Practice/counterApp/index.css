@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+}
+.btn {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+}

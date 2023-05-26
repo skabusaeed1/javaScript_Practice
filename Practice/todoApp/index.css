@@ -1,0 +1,23 @@
+.container {
+  text-align: center;
+}
+
+input {
+  margin-bottom: 30px;
+}
+table,
+th,
+td {
+  margin-left: 650px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+#delete {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 7px;
+}
