@@ -1,0 +1,11 @@
+@media (min-width: 400px) and (max-width: 800px) {
+  * {
+    background-color: brown;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  * {
+    background-color: green;
+  }
+}

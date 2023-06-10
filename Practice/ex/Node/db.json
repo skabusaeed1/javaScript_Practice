@@ -1,0 +1,16 @@
+{
+    "pots":[
+        {
+           "name":"saeed",
+           "role":"frontend"
+        },
+        {
+            "name":"abusaeed",
+            "role":"backend"
+         },
+         {
+            "name":"abuzar",
+            "role":"fullstack"
+         }
+    ]
+}
