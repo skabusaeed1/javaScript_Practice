@@ -5,7 +5,11 @@ require("dotenv").config();
 const app = express();
 const { connection } = require("./config/db");
 const { Usermodel } = require("./models/user.model");
+const { blogrouter } = require("./routes/blog");
+const { authentication } = require("./middleware/authentication");
 app.use(express.json());
+
+
 
 app.post("/signup", async (req, res) => {
   try {
@@ -24,18 +28,21 @@ app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await Usermodel.findOne({ email });
-    if (!user.email) {
+    if (!user) {
       res.send("Please signup");
     }
+    var hash=user.password;
     const correct_password = bcrypt.compareSync(password, hash);
     if (correct_password) {
-      var token = jwt.sign({ userId:user._id }, 'mysecret');
-      res.send({messege:"login successfully", token:token});
+      var token = jwt.sign({ userId: user._id },  process.env.JWT_SECRET);
+      res.send({ messege: "login successfully", "token": token });
     }
   } catch (error) {
     console.log("error in login");
   }
 });
+
+app.use("/blog",authentication, blogrouter);
 
 app.listen(8080, async () => {
   try {
