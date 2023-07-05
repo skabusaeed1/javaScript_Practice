@@ -10,15 +10,22 @@ const Memo = () => {
     const increaseTwo=()=>{
         setcountTwo(countTwo+1);
     }
-    const isEven=()=>{
-    let i=0;
+
+    const isEven=useMemo(()=>{
+        let i=0;
     while(i<2000000000) i++;
     return countOne%2===0;
-    }
+    },[countOne])
+    
+    // const isEven=()=>{
+    // let i=0;
+    // while(i<2000000000) i++;
+    // return countOne%2===0;
+    // }
 
   return (
     <div>
-      <span>{isEven()?"Even":"Odd"}</span>
+      <span>{isEven?"Even":"Odd"}</span>
       <button onClick={increaseOne}>countOne: {countOne}</button>
       <button onClick={increaseTwo}>countTwo: {countTwo}</button>
     </div>
@@ -26,3 +33,4 @@ const Memo = () => {
 }
 
 export default Memo
+
