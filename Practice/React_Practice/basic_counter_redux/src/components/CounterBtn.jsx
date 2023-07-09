@@ -15,7 +15,8 @@ const CounterBtn = () => {
   };
   return (
     <div>
-      <button onClick={() => addCount(1)}>Add</button>
+      <button onClick={() => addCount(1)}>Add</button> 
+      
       <button onClick={() => reduceCount(1)} disabled={count == 0}>
         Reduce
       </button>
