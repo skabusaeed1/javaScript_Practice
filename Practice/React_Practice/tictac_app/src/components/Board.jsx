@@ -57,7 +57,7 @@ const Board = () => {
           borderRadius: "10px",
         }}
         onClick={() => {
-          setState(Array(9).fill(null));
+          setState(Array(9).fill(null));  
           // setXval(true);
         }}
       >

@@ -1,0 +1,36 @@
+    .Square-div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      font-size: 3rem;
+      font-weight: 700;
+      border: 2px solid black;
+    }
+
+.Board-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.main{
+  text-align: center;
+}
+.info-div{
+  margin-top: 5%;
+  text-align: center;
+} 
+.btn{
+  border: none;
+  padding: 8px 20px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(238, 37, 37);
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-bottom: 2%;
+}  
+.winner{
+  color: rgb(48, 159, 48);
+}
