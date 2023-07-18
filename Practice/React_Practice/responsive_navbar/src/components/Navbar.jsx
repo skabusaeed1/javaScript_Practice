@@ -14,24 +14,20 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className='container'>
-      <nav className='navbar'>
-      <div className='logo'>
-      <h1 >Abusaeed</h1>
-      </div>
-       <ul className={mobile ? "new-ul-div" : "ul-div"}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Skills</li>
-            <li>contact</li>
-        </ul>
-        <div className='mobile-btn-1'>
-        <button className='btn-1' onClick={handlebtn}>{
-          mobile ? <ImCross/> : <FaBars/>
-        }</button>
+      <div className='header'>
+        <h1>Abusaeed</h1>
+        <div className={mobile ?"nav-menu active" : 'nav-menu'}>
+          <p>Home</p>
+          <p>About</p>
+          <p>Skills</p>
+          <p>Contact</p>
+          <p>Resume</p>
         </div>
-      </nav>
+        <div className='hamburger' onClick={handlebtn}>
+          {
+            mobile ? <ImCross/> : <FaBars/> 
+          }
+        </div>
       </div>
     </div>
   )
